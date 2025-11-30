@@ -13,18 +13,13 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            height: 100%;
-        }
-
+        /* เอา height:100% ออกจาก default เพื่อให้ mobile เลื่อนหน้าได้ */
         body {
             font-family: 'Mali', cursive;
             background: linear-gradient(to right, #FDC7D7, #FFFFFF, #FDC7D7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
+            padding: 24px 16px;
+            /* ให้มีระยะหายใจบนมือถือ */
         }
 
         .letter-card {
@@ -34,6 +29,8 @@
             width: min(90%, 700px);
             border: 2px solid #E86C8D;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+            /* จัดให้อยู่กลางแนวนอน */
         }
 
         h2 {
@@ -66,9 +63,6 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(232, 108, 141, 0.4);
         }
-
-
-
 
         /* กันติ่งขอบจอ + ระยะปลอดภัย */
         @supports (padding: max(0px)) {
@@ -212,6 +206,22 @@
                 transition: none !important;
             }
         }
+
+        /* ---------- จอใหญ่ (Desktop) : ค่อยจัดกลางทั้งหน้าจอ ---------- */
+        @media (min-width: 1025px) {
+
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 
@@ -219,7 +229,14 @@
     <!-- อิอิ -->
     <div class="letter-card">
         <h2>Happy 1st year anniversary</h2>
-        <p>Today marks a year of us walking through life hand in hand, and I can’t express how much happiness you’ve brought into my everyday life. Thank you for holding on to me so tightly, even on the days when you’re exhausted or not feeling well. I’m sorry for the moments when I wasn’t my best, but I want you to know that there has never been a single day when my love or my care for you faded—not even for a moment. No matter what tomorrow brings, I know we’ll face it together, side by side, just like we always have. So let’s keep choosing each other and celebrating every anniversary for many years to come, my love. I love you more deeply than words can ever say. Thank you for finding your way into my life and making it feel like home. I love you Anthony.❤️
+        <p>Today marks a year of us walking through life hand in hand, and I can’t express how much happiness you’ve
+            brought into my everyday life. Thank you for holding on to me so tightly, even on the days when you’re
+            exhausted or not feeling well. I’m sorry for the moments when I wasn’t my best, but I want you to know that
+            there has never been a single day when my love or my care for you faded—not even for a moment. No matter
+            what tomorrow brings, I know we’ll face it together, side by side, just like we always have. So let’s keep
+            choosing each other and celebrating every anniversary for many years to come, my love. I love you more
+            deeply than words can ever say. Thank you for finding your way into my life and making it feel like home. I
+            love you Anthony.❤️
         </p>
 
         <!-- ปุ่มกลับไปหน้าเมนู -->
